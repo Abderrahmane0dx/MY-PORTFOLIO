@@ -81,7 +81,8 @@ section {
   }
 
   .hero-layout {
-    @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
+    @apply relative z-10 xl:mt-20 mt-32 flex xl:items-center items-start justify-center;
+    min-height: 90vh;
   }
 
   .hero-text {
@@ -99,7 +100,10 @@ section {
   }
 
   .hero-3d-layout {
-    @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
+    @apply xl:w-[70%] w-full absolute xl:-top-20 top-24 xl:-right-20 right-0;
+    /* Extend the height so content can flow beyond the section */
+    height: 120vh; /* This makes it taller than the viewport */
+    min-height: 80vh; /* Minimum height fallback */
   }
 
   .navbar {
@@ -110,7 +114,7 @@ section {
     }
 
     &.not-scrolled {
-      @apply top-0 bg-transparent;
+      @apply md:top-10 top-0 bg-transparent;
     }
 
     .inner {
@@ -421,6 +425,63 @@ section {
   }
 }
 /* marquee end */
+
+.marquee {
+  overflow: hidden;
+  width: 100vw;
+  background-color: #f9f9f9;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 120px;
+  margin-right: 40px;
+}
+
+.logo-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.logo-item p {
+  font-size: 0.875rem;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
 
 .card {
   --start: 0;

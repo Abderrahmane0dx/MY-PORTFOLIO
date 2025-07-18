@@ -1,3 +1,90 @@
+const portfolioData = {
+  tabs: ["Projects", "Certificates", "Tech Stack"],
+
+  projects: [
+    {
+      title: "Dream House",
+      description: "An E-commerce website to shop for electronic devices of all types online.",
+      demoLink: "#",
+      detailsLink: "#",
+      image: "/PROJECTS/E-COMMERCE.png",
+    },
+    {
+      title: "Harry Hotel",
+      description: "A Java-based application for seamless hotel room reservations, featuring real-time availability, a user-friendly interface, and a secure booking process.",
+      demoLink: "#",
+      detailsLink: "#",
+      image: "/PROJECTS/Hotel.png",
+    },
+    {
+      title: "Dame Game",
+      description: "A checkers game built using Assembly, featuring efficient logic, low-level optimizations, and smooth gameplay execution.",
+      demoLink: "#",
+      detailsLink: "#",
+      image: "/PROJECTS/asm.png",
+    },
+    {
+    title: "Project Four",
+    image: "/images/project4.png",
+    description: "Description of project four.",
+    detailsLink: "#",
+    demoLink: "#",
+    },
+    {
+    title: "Project Four",
+    image: "/images/project4.png",
+    description: "Description of project four.",
+    detailsLink: "#",
+    demoLink: "#",
+    },
+    {
+    title: "Project Four",
+    image: "/images/project4.png",
+    description: "Description of project four.",
+    detailsLink: "#",
+    demoLink: "#",
+    },
+    {
+    title: "Project Four",
+    image: "/images/project4.png",
+    description: "Description of project four.",
+    detailsLink: "#",
+    demoLink: "#",
+    },
+    {
+    title: "Project Four",
+    image: "/images/project4.png",
+    description: "Description of project four.",
+    detailsLink: "#",
+    demoLink: "#",
+    }
+  ],
+
+  certificates: [
+    {
+      title: "Next.js Certification",
+      description: "Certified in building full-stack apps using Next.js.",
+      link: "#"
+    },
+    {
+      title: "React Fundamentals",
+      description: "Completed course on core React concepts.",
+      link: "#"
+    }
+  ],
+
+  techStack: [
+    { name: "HTML", icon: "/tech/html.png" },
+    { name: "CSS", icon: "/tech/css.png" },
+    { name: "JavaScript", icon: "/tech/javascript.png" },
+    { name: "React", icon: "/tech/react.png" },
+    { name: "Tailwind", icon: "/tech/tailwind.png" },
+    { name: "GitHub", icon: "/tech/github.png" }
+  ]
+};
+
+export default portfolioData;
+
 const navLinks = [
   {
     name: "Work",
@@ -35,6 +122,20 @@ const counterItems = [
   { value: 90, suffix: "%", label: "Client Retention Rate" },
 ];
 
+export const logoIcons = [
+  { imgPath: "/images/TECH/HTML5.svg", name: "HTML" },
+  { imgPath: "/images/TECH/JavaScript.svg", name: "JavaScript" },
+  { imgPath: "/images/TECH/TypeScript.svg", name: "TypeScript" },
+  { imgPath: "/images/TECH/CSS.svg", name: "CSS" },
+  { imgPath: "/images/TECH/tailwind.svg", name: "Tailwind CSS" },
+  { imgPath: "/images/TECH/vite.svg", name: "Vite" },
+  { imgPath: "/images/TECH/React.svg", name: "React" },
+  { imgPath: "/images/TECH/Node.svg", name: "Node.js" },
+  { imgPath: "/images/TECH/MongoDB.svg", name: "MongoDB" },
+  { imgPath: "/images/TECH/Firebase.svg", name: "Firebase" },
+  { imgPath: "/images/TECH/MySQL.svg", name: "MySQL" },
+];
+
 const logoIconsList = [
   {
     imgPath: "/images/logos/company-logo-1.png",
@@ -69,6 +170,16 @@ const logoIconsList = [
   {
     imgPath: "/images/logos/company-logo-11.png",
   },
+];
+
+// constants/index.js
+export const logos = [
+  { name: "HTML", imgPath: "/logos/html.png" },
+  { name: "CSS", imgPath: "/logos/css.png" },
+  { name: "JavaScript", imgPath: "/logos/javascript.png" },
+  { name: "React", imgPath: "/logos/react.png" },
+  { name: "Node", imgPath: "/logos/node.png" },
+  // Add more as needed
 ];
 
 const abilities = [
