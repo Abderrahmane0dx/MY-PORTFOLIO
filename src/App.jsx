@@ -9,6 +9,7 @@ const App = () => {
     <>
       <NavBar/>
       <Hero/>
+      <LogoSection/>
       <Showcase/>
     </>
   )
