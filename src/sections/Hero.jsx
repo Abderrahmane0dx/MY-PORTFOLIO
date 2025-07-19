@@ -26,10 +26,10 @@ const Hero = () => {
         </div>
         <div className='hero-layout'>
             {/* LEFT: HERO CONTENT */}
-            <header className='flex flex-col justify-center md:w-full w-screen md:px-20 px-5'>
-                <div className='flex flex-col gap-7'>
+            <header className='flex flex-col justify-center md:w-full w-screen lg:px-20 px-5 items-center lg:items-start text-center lg:text-left'>
+                <div className='flex flex-col gap-7 items-center lg:items-start'>
                     <div className='hero-text'>
-                        <div className="flex flex-col items-start text-left space-y-2">
+                        <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-2">
                             <h1 className="text-4xl md:text-6xl font-bold text-white">
                                 Hello there<span className="text-primary"> !</span>
                             </h1>
