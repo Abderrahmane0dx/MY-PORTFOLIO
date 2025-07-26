@@ -1,7 +1,6 @@
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
-import HeroLights from "./HeroLights";
 import Particles from "./Particles";
 import { Suspense } from "react";
 
@@ -37,7 +36,6 @@ const HeroExperience = () => {
         />
 
         <Suspense fallback={null}>
-          <HeroLights />
           <Particles count={500} />
         </Suspense>
       </Canvas>

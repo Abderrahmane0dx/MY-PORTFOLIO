@@ -136,6 +136,44 @@ export const logoIcons = [
   { imgPath: "/images/TECH/MySQL.svg", name: "MySQL" },
 ];
 
+export const cardData = [
+    {
+      id: 1,
+      image: "../images/AI.png",
+      badge: "Designer",
+      badgeType: "designer",
+      title: "Lorem ipsum"
+    },
+    {
+      id: 2,
+      image: "AI.png",
+      badge: "Developer",
+      badgeType: "developer",
+      title: "Lorem ipsum"
+    },
+    {
+      id: 3,
+      image: "AI.png",
+      badge: "Marketer",
+      badgeType: "marketer",
+      title: "Lorem ipsum"
+    },
+    {
+      id: 4,
+      image: "AI.png",
+      badge: "Gamer",
+      badgeType: "gamer",
+      title: "Lorem ipsum"
+    },
+    {
+      id: 5,
+      image: "AI.png",
+      badge: "Editor",
+      badgeType: "editor",
+      title: "Lorem ipsum"
+    }
+];
+
 const logoIconsList = [
   {
     imgPath: "/images/logos/company-logo-1.png",
