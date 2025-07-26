@@ -1,34 +1,117 @@
-import React from 'react'
+import { useEffect, useRef } from 'react';
+import { cardData } from '../constants/index.js';
 
 const Showcase = () => {
-  return (
-    <div id='work' className='app-showcase'>
-        <div className='w-full'>
-            <div className='showcaselayout'>
-                {/* LEFT */}
-                <div className='first-project-wrapper'>
-                    <div className='image-wrapper'>
-                        <img src="/images/project1.png" alt="Ryde" />
-                    </div>
-                    <div className='text-content'>
-                        <h2>On-Demand Rides Made Simple with a Powerful, User-Friendly App called Ryde</h2>
-                        <p className='text-white-50 md:text-xl'>
-                            An app built React Native, Expo, & TailwindCSS for fast, user-freindly experience.
-                        </p>
-                    </div>
-                </div>
-                {/* RIGHT */}
-                <div className='project-list-wrapper overflow-hidden'>
-                    <div className='project'>
-                        <div className='image-wrapper bg-[#ffefdb]'>
-                            <img src="/images/project2.png" alt="Library Management Platform" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  )
-}
+  const swiperRef = useRef(null);
 
-export default Showcase
+  useEffect(() => {
+    // Check if Swiper is already loaded
+    if (window.Swiper) {
+      initializeSwiper();
+      return;
+    }
+
+    // Load Swiper via CDN
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+    script.async = true;
+    script.onload = initializeSwiper;
+    document.head.appendChild(script);
+
+    // Load Swiper CSS
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+    document.head.appendChild(link);
+
+    function initializeSwiper() {
+      // Small delay to ensure DOM is ready
+      setTimeout(() => {
+        swiperRef.current = new window.Swiper('.card-wrapper', {
+          loop: true,
+          spaceBetween: 30,
+          
+          // Enhanced pagination configuration
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '"></span>';
+            },
+          },
+          
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          
+          // Add event listeners for slide changes
+          on: {
+            slideChange: function () {
+              // Force pagination update
+              if (this.pagination && this.pagination.render) {
+                this.pagination.render();
+                this.pagination.update();
+              }
+            },
+            slideChangeTransitionEnd: function () {
+              // Additional pagination update after transition
+              if (this.pagination && this.pagination.update) {
+                this.pagination.update();
+              }
+            },
+          },
+          
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          },
+        });
+      }, 100);
+    }
+
+    // Cleanup function
+    return () => {
+      if (swiperRef.current && swiperRef.current.destroy) {
+        swiperRef.current.destroy(true, true);
+      }
+    };
+  }, []);
+
+  return (
+    <section className="showcase-section">
+      <div className="container swiper">
+        <div className="card-wrapper">
+          <ul className="card-list swiper-wrapper">
+            {cardData.map((card) => (
+              <li key={card.id} className="card-item swiper-slide">
+                <a href="#" className="card-link">
+                  <img src={card.image} alt="Card" className="card-image" />
+                  <p className={`badge ${card.badgeType}`}>{card.badge}</p>
+                  <h2 className="card-title">{card.title}</h2>
+                  <button className="card-button material-symbols-rounded">
+                    arrow_forward_ios
+                  </button>
+                </a>
+              </li>
+            ))}
+          </ul>
+          
+          <div className="swiper-pagination"></div>
+          <div className="swiper-button-prev"></div>
+          <div className="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Showcase;
