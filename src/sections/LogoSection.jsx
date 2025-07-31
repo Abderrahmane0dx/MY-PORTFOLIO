@@ -1,10 +1,16 @@
 import { logoIcons } from "../constants";
+import TitleHeader from "../components/TitleHeader";
 
 const LogoScroll = () => {
   const duplicatedList = [...logoIcons, ...logoIcons];
 
   return (
-    <div className="scroller relative z-20 w-[90vw] max-w-[1680px] overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] section2">
+    
+    <div className="scroller relative z-20 w-[90vw] max-w-[1680px] overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] section2 mt-12">
+      <TitleHeader
+          title=" Tech I Use – Power Behind the Projects "
+          className="text-center"
+      />
       <ul className="flex h-fit w-max min-w-full shrink-0 flex-nowrap gap-4 py-4 animate-scroll hover:[animation-play-state:paused]">
         {duplicatedList.map((icon, index) => (
           <li
