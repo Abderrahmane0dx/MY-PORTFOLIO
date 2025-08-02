@@ -33,7 +33,7 @@ const Hero = () => {
                             <h1 className="text-4xl md:text-6xl font-bold text-white">
                                 Hello there<span className="text-primary"> !</span>
                             </h1>
-                            <h1 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600 drop-shadow-lg">
+                            <h1 className="text-3xl md:text-5xl font-extrabold text-indigo-500 drop-shadow-[0_0_12px_rgba(99,102,241,0.7)]">
                                 It&apos;s Abderrahmane Benamara
                             </h1>
                         </div> 
@@ -45,6 +45,7 @@ const Hero = () => {
                      className="md:w-80 md:h-16 w-60 h-12"
                      id="button"
                      text="See my work"
+                     href="#showcase"
                     />
                 </div>
             </header>
