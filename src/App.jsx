@@ -10,8 +10,8 @@ const App = () => {
     <>
       <NavBar/>
       <Hero/>
-      <LogoSection/>
       <Showcase/>
+      <LogoSection/>
       <Contact/>
       <Footer/>
     </>

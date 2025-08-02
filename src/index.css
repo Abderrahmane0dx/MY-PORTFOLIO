@@ -2,160 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 @import "tailwindcss";
 
-.showcase-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
-.card-wrapper {
-    max-width: 1100px;
-    margin: 0 60px 35px;
-    padding: 20px 10px;
-    overflow: hidden;
-}
-
-.card-list .card-item {
-    list-style: none;
-}
-
-.card-list .card-item .card-link {
-    user-select: none;
-    display: block;
-    background: #fff;
-    padding: 18px;
-    border-radius: 12px;
-    text-decoration: none;
-    border: 2px solid transparent;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
-    transition: 0.2s ease;
-}
-
-.card-list .card-item .card-link:active {
-    cursor: grabbing;
-}
-
-.card-list .card-item .card-link:hover {
-    border-color: #5372F0;
-}
-
-.card-list .card-link .card-image {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.card-list .card-link .badge {
-    color: #5372F0;
-    padding: 8px 16px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    margin: 16px 0 18px;
-    background: #DDE4FF;
-    width: fit-content;
-    border-radius: 50px;
-}
-
-.card-list .card-link .badge.designer {
-    color: #205C20;
-    background: #D6F8D6;
-}
-
-.card-list .card-link .badge.developer {
-    color: #B22485;
-    background: #F7DFF5;
-}
-
-.card-list .card-link .badge.gamer {
-    color: #B25A28;
-    background: #FFE3D2;
-}
-
-.card-list .card-link .badge.marketer {
-    color: #205C20;
-    background: #D6F8D6;
-}
-
-.card-list .card-link .badge.editor {
-    color: #B22485;
-    background: #F7DFF5;
-}
-
-.card-list .card-link .card-title {
-    font-size: 1.19rem;
-    color: #000;
-    font-weight: 600;
-}
-
-.card-list .card-link .card-button {
-    height: 35px;
-    width: 35px;
-    color: #5372F0;
-    border-radius: 50%;
-    margin: 30px 0 5px;
-    background: none;
-    cursor: pointer;
-    border: 2px solid #5372F0;
-    transform: rotate(-45deg);
-    transition: 0.4s ease;
-}
-
-.card-list .card-link:hover .card-button {
-    color: #fff;
-    background: #5372F0;
-}
-
-.card-wrapper .swiper-pagination-bullet {
-    height: 13px;
-    width: 13px;
-    opacity: 0.5;
-    background: #5372F0;
-}
-
-.card-wrapper .swiper-pagination-bullet-active {
-    opacity: 1;
-}
-
-.card-wrapper .swiper-slide-button {
-    color: #5372F0;
-    margin-top: -35px ;
-}
-
-@media screen and (max-width: 768px) {
-    .card-wrapper {
-        margin: 0 auto 35px;
-        padding: 20px 10px;
-        max-width: 90vw;
-    }
-
-    .card-list .card-item .card-link {
-        width: 100%;
-        max-width: 450px;
-        margin: 0 auto;
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-        display: none !important;
-    }
-}
-
-@media screen and (min-width: 1280px) {
-  .card-wrapper {
-  margin: 0 auto 35px; /* center horizontally */
-  }
-}
-
-
-
-
-
-
-
-
-
 :root {
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
 }
@@ -183,6 +29,258 @@ section {
   --color-blue-50: #839cb5;
   --color-blue-100: #2d2d38;
 }
+
+/* START OF THE SHOWCASE SECTION STYLES */
+.showcase-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card-wrapper {
+  max-width: 1300px;
+  margin: 0 60px 35px;
+  padding: 20px 10px;
+  overflow: hidden;
+}
+
+.card-list .card-item {
+  list-style: none;
+}
+
+.card-list .card-item .card-link {
+  user-select: none;
+  display: block;
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+}
+
+.card-list .card-item .card-link:active {
+  cursor: grabbing;
+}
+
+.card-list .card-item .card-link:hover {
+  border-color: #5372F0;
+}
+
+.card-list .card-link .card-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-list .card-link .badge {
+  color: #5372F0;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 16px 0 18px;
+  background: #DDE4FF;
+  width: fit-content;
+  border-radius: 50px;
+}
+
+.card-list .card-link .badge.designer {
+  color: #205C20;
+  background: #D6F8D6;
+}
+
+.card-list .card-link .badge.developer {
+  color: #B22485;
+  background: #F7DFF5;
+}
+
+.card-list .card-link .badge.gamer {
+  color: #B25A28;
+  background: #FFE3D2;
+}
+
+.card-list .card-link .badge.marketer {
+  color: #205C20;
+  background: #D6F8D6;
+}
+
+.card-list .card-link .badge.editor {
+  color: #B22485;
+  background: #F7DFF5;
+}
+
+.card-list .card-link .card-title {
+  font-size: 1.19rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+  background: #5372F0;
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button {
+  color: #5372F0;
+  margin-top: -35px;
+}
+
+.swiper-pagination {
+  display: none !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  transition: all 0.3s ease;
+  top: 50% !important;
+}
+
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(74, 144, 226, 0.3) 0%, rgba(74, 144, 226, 0.1) 50%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.swiper-button-prev:hover::before,
+.swiper-button-next:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 1024px) {
+  .swiper-button-prev {
+    left: 50px !important;
+  }
+  
+  .swiper-button-next {
+    right: 50px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-wrapper {
+    margin: 0 auto 35px;
+    padding: 20px 10px;
+    max-width: 90vw;
+  }
+
+  .card-list .card-item .card-link {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .card-wrapper {
+    margin: 0 auto 35px;
+  }
+}
+
+/* Add separator line after card title */
+.card-list .card-link .card-title::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #e5e7eb;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* New button container and styles */
+.card-buttons {
+  display: flex;
+  justify-content: space-between; /* This will push buttons to opposite sides */
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.card-buttons a {
+  flex: 1;
+}
+
+.card-button-code {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #2D3E50;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.card-button-code:hover {
+  background-color: #3B4C63;
+  transform: translateY(-1px);
+}
+
+.card-button-demo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #DBEAFE;
+  color: #1E3A8A;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.card-button-demo:hover {
+  background-color: #BFDBFE;
+  transform: translateY(-1px);
+}
+
+@keyframes bounce-x {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+.animate-bounce-x {
+  animation: bounce-x 1s infinite;
+}
+
+
+/* END OF THE SHOWCASE SECTION STYLES */
 
 @layer utilities {
   .flex-center {
@@ -371,7 +469,13 @@ section {
     .bg-circle {
       @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
         w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
-        rounded-full bg-white-50 transition-all duration-500;
+        rounded-full group-hover:bg-white transition-all duration-600;
+    }
+
+    .bg-circle-contact {
+      @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
+        w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
+        rounded-full bg-white-50 group-hover:bg-white transition-all duration-600;
     }
 
     .text {
@@ -388,7 +492,7 @@ section {
       }
     }
   }
-
+  
   .card-border {
     @apply border border-black-50 bg-black-100;
   }
@@ -632,6 +736,7 @@ section {
     transform: translateX(-50%);
   }
 }
+
 
 .animate-scroll {
   animation: scroll 30s linear infinite;

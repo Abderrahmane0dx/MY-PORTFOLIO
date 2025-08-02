@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { cardData } from '../constants/index.js';
+import Button from '../components/Button';    
 
 const Showcase = () => {
   const swiperRef = useRef(null);
@@ -29,40 +30,13 @@ const Showcase = () => {
       setTimeout(() => {
         swiperRef.current = new window.Swiper('.card-wrapper', {
           loop: true,
-          spaceBetween: 30,
-          
-          // Enhanced pagination configuration
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            dynamicBullets: true,
-            renderBullet: function (index, className) {
-              return '<span class="' + className + '"></span>';
-            },
-          },
-          
+          spaceBetween: 20,
+                     
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           },
-          
-          // Add event listeners for slide changes
-          on: {
-            slideChange: function () {
-              // Force pagination update
-              if (this.pagination && this.pagination.render) {
-                this.pagination.render();
-                this.pagination.update();
-              }
-            },
-            slideChangeTransitionEnd: function () {
-              // Additional pagination update after transition
-              if (this.pagination && this.pagination.update) {
-                this.pagination.update();
-              }
-            },
-          },
-          
+                     
           breakpoints: {
             0: {
               slidesPerView: 1,
@@ -93,18 +67,34 @@ const Showcase = () => {
           <ul className="card-list swiper-wrapper">
             {cardData.map((card) => (
               <li key={card.id} className="card-item swiper-slide">
-                <a href="#" className="card-link">
+                <div className="card-link">
                   <img src={card.image} alt="Card" className="card-image" />
                   <p className={`badge ${card.badgeType}`}>{card.badge}</p>
                   <h2 className="card-title">{card.title}</h2>
-                  <button className="card-button material-symbols-rounded">
-                    arrow_forward_ios
-                  </button>
-                </a>
+                  
+                  <div className="card-buttons flex gap-2">
+                    <Button
+                      text="Code"
+                      href={card.detailsLink}
+                      isExternal={true}
+                      direction="right"
+                      variant="card"
+                      className="bg-[#2D3E50] text-white rounded-2xl"
+                    />
+                    <Button
+                      text="Demo"
+                      href={card.demoLink}
+                      isExternal={true}
+                      direction="right"
+                      variant="card"
+                      className="bg-[#2D3E50] text-white rounded-2xl"
+                    />
+                  </div>
+                </div>
               </li>
             ))}
           </ul>
-          
+
           <div className="swiper-pagination"></div>
           <div className="swiper-button-prev"></div>
           <div className="swiper-button-next"></div>

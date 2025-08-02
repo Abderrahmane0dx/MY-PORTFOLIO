@@ -96,7 +96,7 @@ const Contact = () => {
 
                 <button type="submit" disabled={loading}>
                   <div className="cta-button group">
-                    <div className="bg-circle" />
+                    <div className="bg-circle-contact" />
                     <p className="text">
                       {loading ? "Sending..." : "Send Message"}
                     </p>

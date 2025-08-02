@@ -1,37 +1,55 @@
-/**
- * A reusable CTA button component.
- * When clicked, it scrolls smoothly to the section with ID "counter",
- * with a small offset from the top for better visual placement.
- */
+const Button = ({
+  text,
+  className,
+  id,
+  href,
+  isExternal = false,
+  direction = "down",
+  variant = "default", // "card" or "default"
+}) => {
+  const handleClick = (e) => {
+    if (!href) {
+      e.preventDefault();
 
-const Button = ({ text, className, id }) => {
-  return (
-    <a
-      onClick={(e) => {
-        e.preventDefault(); // Stop the link from jumping instantly
+      const target = document.getElementById("counter");
+      if (target && id) {
+        const offset = window.innerHeight * 0.15;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    }
+  };
 
-        const target = document.getElementById("counter"); // Find the section with ID "counter"
+  const arrowSrc = direction === "right" ? "/images/arrow-right.svg" : "/images/arrow-down.svg";
+  const arrowClass =
+    direction === "right"
+      ? "size-5 xl:-translate-x-32 translate-x-0 animate-bounce-x group-hover:translate-x-0"
+      : "size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0";
 
-        // Only scroll if we found the section and an ID is passed in
-        // taht prevents the contact button from scrolling to the top
-        if (target && id) {
-          const offset = window.innerHeight * 0.15; // Leave a bit of space at the top
+  const bgCircleClass =
+    variant === "card"
+      ? "bg-transparent group-hover:bg-white-50"
+      : "bg-white-50";
 
-          // Calculate how far down the page we need to scroll
-          const top =
-            target.getBoundingClientRect().top + window.pageYOffset - offset;
+  const wrapperClass = `cta-button group w-full h-full relative ${variant === "card" ? "bg-transparent" : ""}`;
 
-          // Scroll smoothly to that position
-          window.scrollTo({ top, behavior: "smooth" });
-        }
-      }}
-      className={`${className ?? ""} cta-wrapper`} // Add base + extra class names
-    >
-      <div className="cta-button group">
-        <div className="bg-circle" />
-        <p className="text">{text}</p>
+  return isExternal && href ? (
+    <a href={href} target="_blank" rel="noopener noreferrer" onClick={handleClick} className={`${className ?? ""} cta-wrapper`}>
+      <div className={wrapperClass}>
+        <div className={`bg-circle ${bgCircleClass}`} />
+        <p className={`text ${variant === "card" ? "text-white" : ""}`}>{text}</p>
         <div className="arrow-wrapper">
-          <img src="/images/arrow-down.svg" alt="arrow" />
+          <img src={arrowSrc} alt="arrow" className={arrowClass} />
+        </div>
+      </div>
+    </a>
+  ) : (
+    <a href="#" onClick={handleClick} className={`${className ?? ""} cta-wrapper`}>
+      <div className={wrapperClass}>
+        <div className={`bg-circle ${bgCircleClass}`} />
+        <p className={`text ${variant === "card" ? "text-white" : ""}`}>{text}</p>
+        <div className="arrow-wrapper">
+          <img src={arrowSrc} alt="arrow" className={arrowClass} />
         </div>
       </div>
     </a>
