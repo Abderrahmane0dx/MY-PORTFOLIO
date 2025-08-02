@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { cardData } from '../constants/index.js';
 import Button from '../components/Button';    
+import TitleHeader from '../components/TitleHeader';
 
 const Showcase = () => {
   const swiperRef = useRef(null);
@@ -63,15 +64,16 @@ const Showcase = () => {
   return (
     <section className="showcase-section">
       <div className="container swiper">
+        <TitleHeader title="Explore My Journey Through Code" />
         <div className="card-wrapper">
           <ul className="card-list swiper-wrapper">
             {cardData.map((card) => (
               <li key={card.id} className="card-item swiper-slide">
                 <div className="card-link">
                   <img src={card.image} alt="Card" className="card-image" />
-                  <p className={`badge ${card.badgeType}`}>{card.badge}</p>
-                  <h2 className="card-title">{card.title}</h2>
-                  
+                  <h2 className="card-title mt-4 ">{card.title}</h2>
+                  <p className="card-description text-sm text-gray-800 mb-4 mt-4">{card.description}</p>
+                  <hr className="border-gray-500 mb-4" />
                   <div className="card-buttons flex gap-2">
                     <Button
                       text="Code"

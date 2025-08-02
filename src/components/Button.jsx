@@ -5,7 +5,7 @@ const Button = ({
   href,
   isExternal = false,
   direction = "down",
-  variant = "default", // "card" or "default"
+  variant = "default",
 }) => {
   const handleClick = (e) => {
     if (!href) {
