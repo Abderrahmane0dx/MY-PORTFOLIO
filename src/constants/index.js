@@ -1,90 +1,3 @@
-const portfolioData = {
-  tabs: ["Projects", "Certificates", "Tech Stack"],
-
-  projects: [
-    {
-      title: "Dream House",
-      description: "An E-commerce website to shop for electronic devices of all types online.",
-      demoLink: "#",
-      detailsLink: "#",
-      image: "/PROJECTS/E-COMMERCE.png",
-    },
-    {
-      title: "Harry Hotel",
-      description: "A Java-based application for seamless hotel room reservations, featuring real-time availability, a user-friendly interface, and a secure booking process.",
-      demoLink: "#",
-      detailsLink: "#",
-      image: "/PROJECTS/Hotel.png",
-    },
-    {
-      title: "Dame Game",
-      description: "A checkers game built using Assembly, featuring efficient logic, low-level optimizations, and smooth gameplay execution.",
-      demoLink: "#",
-      detailsLink: "#",
-      image: "/PROJECTS/asm.png",
-    },
-    {
-    title: "Project Four",
-    image: "/images/project4.png",
-    description: "Description of project four.",
-    detailsLink: "#",
-    demoLink: "#",
-    },
-    {
-    title: "Project Four",
-    image: "/images/project4.png",
-    description: "Description of project four.",
-    detailsLink: "#",
-    demoLink: "#",
-    },
-    {
-    title: "Project Four",
-    image: "/images/project4.png",
-    description: "Description of project four.",
-    detailsLink: "#",
-    demoLink: "#",
-    },
-    {
-    title: "Project Four",
-    image: "/images/project4.png",
-    description: "Description of project four.",
-    detailsLink: "#",
-    demoLink: "#",
-    },
-    {
-    title: "Project Four",
-    image: "/images/project4.png",
-    description: "Description of project four.",
-    detailsLink: "#",
-    demoLink: "#",
-    }
-  ],
-
-  certificates: [
-    {
-      title: "Next.js Certification",
-      description: "Certified in building full-stack apps using Next.js.",
-      link: "#"
-    },
-    {
-      title: "React Fundamentals",
-      description: "Completed course on core React concepts.",
-      link: "#"
-    }
-  ],
-
-  techStack: [
-    { name: "HTML", icon: "/tech/html.png" },
-    { name: "CSS", icon: "/tech/css.png" },
-    { name: "JavaScript", icon: "/tech/javascript.png" },
-    { name: "React", icon: "/tech/react.png" },
-    { name: "Tailwind", icon: "/tech/tailwind.png" },
-    { name: "GitHub", icon: "/tech/github.png" }
-  ]
-};
-
-export default portfolioData;
-
 const navLinks = [
   {
     name: "Work",
@@ -104,16 +17,6 @@ const navLinks = [
   },
 ];
 
-const words = [
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
-];
 
 const counterItems = [
   { value: 15, suffix: "+", label: "Years of Experience" },
@@ -137,42 +40,40 @@ export const logoIcons = [
 ];
 
 export const cardData = [
-    {
-      id: 1,
-      image: "../images/AI.png",
-      badge: "Designer",
-      badgeType: "designer",
-      title: "Lorem ipsum"
-    },
-    {
-      id: 2,
-      image: "AI.png",
-      badge: "Developer",
-      badgeType: "developer",
-      title: "Lorem ipsum"
-    },
-    {
-      id: 3,
-      image: "AI.png",
-      badge: "Marketer",
-      badgeType: "marketer",
-      title: "Lorem ipsum"
-    },
-    {
-      id: 4,
-      image: "AI.png",
-      badge: "Gamer",
-      badgeType: "gamer",
-      title: "Lorem ipsum"
-    },
-    {
-      id: 5,
-      image: "AI.png",
-      badge: "Editor",
-      badgeType: "editor",
-      title: "Lorem ipsum"
-    }
+  {
+    id: 1,
+    image: "../images/AI.png",
+    title: "BrainWave | AI Chatting",
+    description: "An elegant interface for an AI generator, crafted to enhance your React and Tailwind skills. It features bento layouts, parallax effects, and a fully responsive design to explore modern UI through real-world practice.",
+    detailsLink: "https://github.com/Abderrahmane0dx/AI-PROJECT-REACT", 
+    demoLink: "" 
+  },
+  {
+    id: 2,
+    image: "../images/E-COMMERCE.png",
+    title: "DigitalTech | Modern Experience",
+    description: "A sleek online store for phones, laptops, tablets, and smartwatches. Built with clean UI components, intuitive UX, and fully responsive layouts to deliver a seamless and modern shopping experience across all devices.",
+    detailsLink: "https://github.com/Abderrahmane0dx/PROJET-WEB",
+    demoLink: ""
+  },
+  {
+    id: 3,
+    image: "../images/MOVIE-PROJECT.png",
+    title: "CineStream | Your Home Cinema",
+    description: "Explore a world of movies from the comfort of your home. This app fetches data from an external API to display trending films in a clean, responsive interface—bringing the cinema experience to your screen.",
+    detailsLink: "https://github.com/Abderrahmane0dx/LEARNING-REACT",
+    demoLink: ""
+  },
+  {
+    id: 4,
+    image: "../images/CHAT-APP1.png",
+    title: "Chatty | Realtime Messaging App",
+    description: "A full-stack MERN chat app with real-time messaging powered by Socket.io. Inspired by modern platforms like Instagram and Facebook, it delivers smooth, instant conversations in a sleek and responsive UI.",
+    detailsLink: "https://github.com/Abderrahmane0dx/CHAT-APP",
+    demoLink: ""
+  }
 ];
+
 
 const logoIconsList = [
   {
@@ -413,7 +314,7 @@ const socialImgs = [
 ];
 
 export {
-  words,
+  
   abilities,
   logoIconsList,
   counterItems,
