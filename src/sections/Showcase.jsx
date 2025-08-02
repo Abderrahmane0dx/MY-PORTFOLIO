@@ -62,9 +62,11 @@ const Showcase = () => {
   }, []);
 
   return (
-    <section className="showcase-section">
+    <section id="showcase" className="showcase-section">
       <div className="container swiper">
-        <TitleHeader title="Explore My Journey Through Code" />
+        <div className="mb-12 mt-12">
+          <TitleHeader title="Explore My Journey Through Code" />
+        </div>
         <div className="card-wrapper">
           <ul className="card-list swiper-wrapper">
             {cardData.map((card) => (

@@ -8,14 +8,24 @@ const Button = ({
   variant = "default",
 }) => {
   const handleClick = (e) => {
-    if (!href) {
+    if (!href && id) {
       e.preventDefault();
 
-      const target = document.getElementById("counter");
-      if (target && id) {
+      const target = document.getElementById("counter"); // your custom scroll
+      if (target) {
         const offset = window.innerHeight * 0.15;
         const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
         window.scrollTo({ top, behavior: "smooth" });
+      }
+    }
+
+    // Smooth scroll for internal anchor links like #showcase
+    if (href?.startsWith("#")) {
+      e.preventDefault();
+      const targetId = href.slice(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
       }
     }
   };
@@ -33,18 +43,14 @@ const Button = ({
 
   const wrapperClass = `cta-button group w-full h-full relative ${variant === "card" ? "bg-transparent" : ""}`;
 
-  return isExternal && href ? (
-    <a href={href} target="_blank" rel="noopener noreferrer" onClick={handleClick} className={`${className ?? ""} cta-wrapper`}>
-      <div className={wrapperClass}>
-        <div className={`bg-circle ${bgCircleClass}`} />
-        <p className={`text ${variant === "card" ? "text-white" : ""}`}>{text}</p>
-        <div className="arrow-wrapper">
-          <img src={arrowSrc} alt="arrow" className={arrowClass} />
-        </div>
-      </div>
-    </a>
-  ) : (
-    <a href="#" onClick={handleClick} className={`${className ?? ""} cta-wrapper`}>
+  return (
+    <a
+      href={href || "#"}
+      target={isExternal ? "_blank" : "_self"}
+      rel={isExternal ? "noopener noreferrer" : ""}
+      onClick={handleClick}
+      className={`${className ?? ""} cta-wrapper`}
+    >
       <div className={wrapperClass}>
         <div className={`bg-circle ${bgCircleClass}`} />
         <p className={`text ${variant === "card" ? "text-white" : ""}`}>{text}</p>

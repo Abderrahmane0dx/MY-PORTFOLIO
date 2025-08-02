@@ -12,7 +12,7 @@ const HeroExperience = () => {
       {/* Background Image – positioned to show more of the image */}
       <div className="absolute lg:bottom-30 md:bottom-64 left-1/2 transform -translate-x-1/2 z-0 w-full flex items-end justify-center pointer-events-none">
         <div className="relative">
-          <div className="absolute inset-0 z-[-1] w-auto h-auto rounded-full blur-[120px] bg-white opacity-30" />
+          <div className="absolute bottom-[100px] sm:bottom-[-50px] left-1/2 -translate-x-1/2 z-[-1] w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] rounded-full blur-[120px] bg-white opacity-30" />
           <img
             src="/images/HERO.png"
             alt="Hero"
