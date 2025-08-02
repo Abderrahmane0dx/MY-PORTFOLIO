@@ -30,7 +30,8 @@ section {
   --color-blue-100: #2d2d38;
 }
 
-/* START OF THE SHOWCASE SECTION STYLES */
+/****************************** START OF THE SHOWCASE SECTION STYLES ******************************/
+
 .showcase-section {
   display: flex;
   align-items: center;
@@ -205,7 +206,7 @@ section {
   }
 }
 
-/* Add separator line after card title */
+
 .card-list .card-link .card-title::after {
   content: '';
   display: block;
@@ -216,10 +217,9 @@ section {
   margin-bottom: 15px;
 }
 
-/* New button container and styles */
 .card-buttons {
   display: flex;
-  justify-content: space-between; /* This will push buttons to opposite sides */
+  justify-content: space-between; 
   gap: 8px;
   margin-top: 20px;
 }
@@ -279,8 +279,7 @@ section {
   animation: bounce-x 1s infinite;
 }
 
-
-/* END OF THE SHOWCASE SECTION STYLES */
+/****************************** END OF THE SHOWCASE SECTION STYLES ******************************/
 
 @layer utilities {
   .flex-center {
@@ -308,7 +307,8 @@ section {
     @apply xl:mt-20 md:mt-0 mt-40;
   }
 
-  /* General Grids */
+  /****************************** GENERAL GRIDS ******************************/
+
   .grid-base {
     @apply grid grid-cols-1;
   }
@@ -332,6 +332,10 @@ section {
   .grid-12-cols {
     @apply grid grid-cols-1 xl:grid-cols-12 gap-10;
   }
+
+  /****************************** END OF GENERAL GRIDS ******************************/
+
+  /****************************** HERO STYLES ******************************/
 
   .hero-layout {
     @apply relative z-10 xl:mt-20 mt-32 flex xl:items-center items-start justify-center;
@@ -411,6 +415,8 @@ section {
     }
   }
 
+  /****************************** END OF HERO STYLES ******************************/
+
   .app-showcase {
     @apply w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
 
@@ -468,13 +474,15 @@ section {
 
     .bg-circle {
       @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
-        w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
-        rounded-full group-hover:bg-white transition-all duration-600;
+    w-[120%] h-[120%] 
+    group-hover:size-10 
+    group-hover:right-10 md:group-hover:right-4
+    rounded-full group-hover:bg-white transition-all duration-600;
     }
 
     .bg-circle-contact {
       @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
-        w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
+        w-[120%] h-[120%] group-hover:size-10 group-hover:right-10 md:group-hover:right-4
         rounded-full bg-white-50 group-hover:bg-white transition-all duration-600;
     }
 
@@ -484,7 +492,7 @@ section {
     }
 
     .arrow-wrapper {
-      @apply group-hover:bg-white-50 size-10 rounded-full absolute right-10 top-1/2 
+      @apply size-10 rounded-full absolute right-10 md:right-4 top-1/2 
         -translate-y-1/2 flex justify-center items-center overflow-hidden;
 
       img {
@@ -585,7 +593,8 @@ section {
   }
 }
 
-/* Hero text slider starts */
+/****************************** HERO TEXT SLIDER START ******************************/
+
 .slide {
   display: inline-block;
   flex-direction: column;
@@ -625,7 +634,7 @@ section {
   }
 }
 
-/* Hero Text slider ends */
+/****************************** HERO TEXT SLIDER END ******************************/
 
 .gradient-line {
   width: 2px;
@@ -648,6 +657,7 @@ section {
     rgba(255, 255, 255, 0) 100%
   );
 }
+
 .gradient-edge:nth-of-type(2) {
   right: 0;
   background: linear-gradient(
@@ -657,12 +667,14 @@ section {
   );
 }
 
-/* marquee */
+/****************************** MARQUEE ******************************/
+
 .marquee {
   width: 100dvw;
   overflow: hidden;
   position: relative;
 }
+
 .marquee-box {
   display: flex;
   align-items: center;
@@ -672,9 +684,11 @@ section {
   overflow: hidden;
   animation: marquee 60s linear infinite;
 }
+
 .marquee-item {
   float: left;
 }
+
 @keyframes marquee {
   0% {
     left: 0;
@@ -683,7 +697,8 @@ section {
     left: -100%;
   }
 }
-/* marquee end */
+
+/****************************** MARQUEE END ******************************/
 
 .marquee {
   overflow: hidden;
