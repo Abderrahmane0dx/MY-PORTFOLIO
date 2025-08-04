@@ -12,7 +12,7 @@ const Footer = () => {
             <a
               data-social="UpWork"
               href="https://www.upwork.com/freelancers/~01636ef4623d45ae56"
-              style={{ "--accent-color": "green" }}
+              style={{ "--accent-color": "#14a800" }}
             >
               <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>Upwork</title>
@@ -22,7 +22,7 @@ const Footer = () => {
             <a
               data-social="GitHub"
               href="https://github.com/Abderrahmane0dx"
-              style={{ "--accent-color": "rgb(255, 102, 0)" }}
+              style={{ "--accent-color": "rgb(0, 162, 255)" }}
             >
               <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>GitHub</title>
@@ -42,7 +42,7 @@ const Footer = () => {
             <a
               data-social="Gmail"
               href="mailto:benamaraabderrahmane2@gmail.com"
-              style={{ "--accent-color": "rgb(0, 162, 255)" }}
+              style={{ "--accent-color": "#ea4335" }}
             >
               <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>Gmail</title>
