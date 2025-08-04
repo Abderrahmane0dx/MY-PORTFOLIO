@@ -32,7 +32,7 @@ const Footer = () => {
             <a
               data-social="Discord"
               href="https://discord.com/channels/@me"
-              style={{ "--accent-color": "purple" }}
+              style={{ "--accent-color": "#5865f2" }}
             >
               <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>Discord</title>
