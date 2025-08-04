@@ -1,5 +1,3 @@
-import { socialImgs } from "../constants";
-
 const Footer = () => {
   return (
     <footer className="footer pt-6 border-t border-gray-50 ">
