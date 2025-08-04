@@ -5,9 +5,9 @@ const LogoScroll = () => {
   const duplicatedList = [...logoIcons, ...logoIcons];
 
   return (
-    <section id="tech" className="w-full flex flex-col items-center justify-center pt-40">
+    <section id="tech" className="w-full flex flex-col items-center justify-center pt-20">
       
-      <TitleHeader title="Tech I Use – Projects's power" />
+
 
       <div className="scroller relative z-20 w-[90vw] max-w-[1680px] overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] mt-12">
         <ul className="flex h-fit w-max min-w-full shrink-0 flex-nowrap gap-4 py-4 animate-scroll hover:[animation-play-state:paused]">

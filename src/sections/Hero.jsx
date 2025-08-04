@@ -33,7 +33,7 @@ const Hero = () => {
                             <h1 className="text-4xl md:text-6xl font-bold text-white">
                                 Hello there<span className="text-primary"> !</span>
                             </h1>
-                            <h1 className="text-3xl md:text-5xl font-extrabold text-indigo-500 drop-shadow-[0_0_12px_rgba(99,102,241,0.7)]">
+                            <h1 className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 bg-clip-text text-transparent">
                                 It&apos;s Abderrahmane Benamara
                             </h1>
                         </div> 
