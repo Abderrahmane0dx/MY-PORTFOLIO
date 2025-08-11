@@ -54,7 +54,7 @@ const cardData = [
     title: "CineStream | Your Home Cinema",
     description: "Explore a world of movies from the comfort of your home. This app fetches data from an external API to display trending films in a clean, responsive interface—bringing the cinema experience to your screen.",
     detailsLink: "https://github.com/Abderrahmane0dx/LEARNING-REACT",
-    demoLink: "#"
+    demoLink: "https://cinestream-silk.vercel.app/"
   },
   {
     id: 4,
